@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # General
 CURRENT_DATE=`date +%Y-%m-%d`;
 CURRENT_MONTH=`date +%m-%Y`;

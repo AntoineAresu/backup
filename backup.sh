@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo 'Starting database backup dump fetch';
 . ./variables.sh
 . ./.passwords.sh

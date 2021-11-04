@@ -1,4 +1,6 @@
-echo 'Starting database backup dump load';
+#!/bin/bash
+
+echo 'Starting database backup dump send to preprod';
 . ./variables.sh
 . ./.passwords.sh
 sh ./start_timestamp.sh
