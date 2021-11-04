@@ -7,7 +7,7 @@ sh ./start_timestamp.sh
 cd $BACKUP_FOLDER
 
 echo 'Creating dump';
-mysqldump --add-drop-table --host=127.0.0.1 --port=$MYSQL_PORT -u $MYSQL_USER $MYSQL_DB -p$MYSQL_PASSWORD > $DUMP_FILE_PATH;
+mysqldump --add-drop-table --host=$MYSQL_PORT --port=$MYSQL_PORT -u $MYSQL_USER $MYSQL_DB -p$MYSQL_PASSWORD > $DUMP_FILE_PATH;
 echo 'Dump created';
 
 sh ./delete_old_dumps.sh
