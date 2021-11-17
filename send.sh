@@ -6,7 +6,7 @@ echo 'Starting database backup dump send to preprod';
 sh ./start_timestamp.sh
 
 echo 'Copying dump to preprod';
-scp $LAST_DUMP_PATH $PREPROD_USER@$PREPROD_IP:$PREPROD_DUMP_PATH
+scp $LAST_DUMP_PATH $PREPROD_USER@$PREPROD_IP:"~/$PREPROD_DUMP_NAME"
 echo 'Dump copied';
 
 sh ./end_timestamp.sh
