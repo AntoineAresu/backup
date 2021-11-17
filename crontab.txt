@@ -4,4 +4,5 @@
 0 1 * * 0 cd ~/backup && sh ./send.sh >> ~/logs/send-backup-to-preprod.log
 
 // Preprod crontab
-0 2 * * 0 cd ~/backup && sh ./load_preprod.sh && sh ./anonymize_preprod.sh >> ~/logs/load_preprod_dump.log
+0 2 * * 0 cd ~/backup && sh ./load_preprod.sh >> ~/logs/load_preprod_dump.log
+15 2 * * 0 cd ~/backup && sh ./anonymize_preprod.sh >> ~/logs/anonymize_preprod_dump.log

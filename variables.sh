@@ -12,10 +12,15 @@ DUMPS_FOLDER=$HOME'/dumps';
 DUMP_FILE_NAME=`printf "backup_dump_%s.sql" "$CURRENT_DATE"`;
 DUMP_FILE_PATH="$DUMPS_FOLDER/$DUMP_FILE_NAME";
 
-LAST_DUMP_NAME=$(ls -t $DUMPS_FOLDER/ | head -1);
+if [ -d $DUMPS_FOLDER]
+then
+    LAST_DUMP_NAME=$(ls -t $DUMPS_FOLDER/ | head -1);
+else
+    LAST_DUMP_NAME='';
+fi
 LAST_DUMP_PATH=$DUMPS_FOLDER/$LAST_DUMP_NAME;
 
-PREPROD_DUMP_PATH='~/dump.sql';
+PREPROD_DUMP_PATH=$HOME'/dump.sql';
 
 # MySql
 MYSQL_PORT=3306;
