@@ -14,6 +14,15 @@
 * `mkdir dumps`
 * `touch ./.passwords.sh`
 
+### Generate a ssh keypair on the prod machine
+
+* `ssh-keygen -f ~/.ssh/id_ed25519 -t ed25519 -C "admin@prod.fr" -N ''`
+
+### Add the ssh public key to the preprod machine
+
+* Copy the content of prod `~/.ssh/id_ed25519.pub` file
+* Into `~/.ssh/authorized_keys`
+
 ### 
 
 Then, Hydrate password.sh with the following values
