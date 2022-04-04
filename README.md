@@ -9,9 +9,9 @@
 
 ### Clone
 
+* `mkdir dumps`
 * `git clone git@github.com:re-connect/backup.git`
 * `cd backup`
-* `mkdir dumps`
 * `touch ./.passwords.sh`
 
 ### Generate a ssh keypair on the prod machine
