@@ -4,10 +4,10 @@
 echo 'Checking if dump should be archived';
 
 #Check if first day of month
-if [ "$(date +%d)" == "01" ]
+if [ "$(date +%d)" = "01" ]
 then
   #Check if first of january
-  if [ "$(date +%m)" == "01" ]
+  if [ "$(date +%m)" = "01" ]
   then
     mkdir -p "$YEARLY_BACKUP_FOLDER"
     cp "$DUMP_FILE_PATH" "$YEARLY_BACKUP_FOLDER"
