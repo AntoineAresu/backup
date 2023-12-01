@@ -4,10 +4,13 @@
 echo 'Checking if dump should be archived';
 
 #Check if first day of month
-if [ $(date +%d) == "01" ]
+dayNumber=`date '+%d'`
+monthNumber=`date '+%d'`
+#Check if first day of month
+if [ "$dayNumber" -eq 01 ]
 then
   #Check if first of january
-  if [ $(date +%m) == "01" ]
+  if [ "$monthNumber" -eq 01 ]
   then
     echo 'First day of year, moving the dump top monthly folder';
     mkdir -p "$YEARLY_BACKUP_FOLDER"
