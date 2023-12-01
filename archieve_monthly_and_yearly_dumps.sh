@@ -5,7 +5,7 @@ echo 'Checking if dump should be archived';
 
 #Check if first day of month
 dayNumber=`date '+%d'`
-monthNumber=`date '+%d'`
+monthNumber=`date '+%m'`
 #Check if first day of month
 if [ "$dayNumber" -eq 01 ]
 then
